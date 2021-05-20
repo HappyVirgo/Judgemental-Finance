@@ -1,0 +1,40 @@
+.navbar {
+    &.desktop {
+        padding: 16px;
+        gap: 16px;
+    }
+    .btn-launch {
+        border-radius: 3px;
+        letter-spacing: 0px;
+        color: #FAFAFA;
+        opacity: 1;
+        padding: 6px 10px 5px 11px;
+        font: normal normal normal 10px/12px Botrio;
+        &.desktop {
+            padding:  15px 28px 15px 27px;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            order: 10;
+        }
+    }
+    .links {
+        &.desktop {
+            gap: 50px;
+        }
+        .nav-links {
+            gap: 20px;
+            color: #FAFAFA;
+            font: normal normal normal 20px/24px Botrio;
+            letter-spacing: 0px;
+            .nav-link {
+                &:hover {
+                    color: #F73843;
+                }
+                &:active {
+                    color:#F73843
+                }
+            }
+        }
+    }
+}

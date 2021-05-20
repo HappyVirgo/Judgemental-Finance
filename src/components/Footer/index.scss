@@ -1,0 +1,30 @@
+.footer {
+    padding: 6px 28px;
+    .copyright {
+        font: normal normal normal 10px/12px Montserrat;
+        letter-spacing: 0px;
+        color: #FAFAFA;
+        opacity: 1;
+    }
+    
+    .header {
+        font: normal normal normal 12px/15px Botrio;
+        letter-spacing: 0px;
+        color: #FAFAFA;
+        opacity: 1;
+    }
+
+    &.desktop {
+        padding: 19px 191px;
+        .header {
+            font-size: 31px;
+            line-height: 36px;
+            letter-spacing: 0;
+        }
+        .copyright {
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: 0;
+        }
+    }
+}

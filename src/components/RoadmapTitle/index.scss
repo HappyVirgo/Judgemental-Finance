@@ -1,0 +1,36 @@
+.roadmap-title {
+    gap: 23px;
+    &.desktop {
+        gap: 89px;
+    }
+    .outCircle {
+        width: 68px;
+        height: 68px;
+    }
+    .innerCircle {
+        width: 28px;
+        height: 28px;
+        margin: 20px;
+    }
+    .tag {
+        font: normal normal normal 8px/6px Montserrat;
+        letter-spacing: 0.08px;
+        color: #FAFAFA;
+        &.desktop {
+            font-size: 25px;
+            line-height: 30px;
+            letter-spacing: 0.25px;
+        }
+    }
+    
+    .year {
+        font: normal normal normal 8px/6px Montserrat;
+        letter-spacing: 0.08px;
+        color: #F73843;
+        &.desktop {
+            font-size: 25px;
+            line-height: 30px;
+            letter-spacing: 0.25px;
+        }
+    }
+}

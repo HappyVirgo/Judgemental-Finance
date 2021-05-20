@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-black-c {
+  background-color: #1F1E23;
+}
+
+.bg-red-c {
+  background-color: #F73843;
+}
+
+.mt-2-c {
+  margin-top: 10px;
+}
+
+.mt-3-c {
+  margin-top: 13px;
+}
+
+.gap-2-c {
+  gap: 10px;
+}
+
+.highlight {
+  font: italic normal normal 12px/15px Montserrat;
+  letter-spacing: 0.05px;
+  color: #F73843;
+  &.desktop-description {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+  }
+}
+
+.normal {
+  font: italic normal normal 12px/15px Montserrat;
+  letter-spacing: 0.05px;
+  color: #FAFAFA;
+  &.desktop-description {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+  }
+}
+
+@font-face {
+  font-family: 'Botrio';
+  src: url('./assets/fonts/FontsFree-Net-Botrio.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Black.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Bold.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-ExtraBold.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Hairline.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Light.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Regular.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-SemiBold.otf') format('truetype');
+  src: url('./assets/fonts/Montserrat-Thin.ttf') format('truetype');
+  src: url('./assets/fonts/Montserrat-UltraLight.otf') format('truetype');
+}

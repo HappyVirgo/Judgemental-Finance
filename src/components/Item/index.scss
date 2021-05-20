@@ -1,0 +1,26 @@
+.item {
+    max-width: 30px;
+    &.item-desktop {
+        max-width: 90px;
+    }
+    .title {
+        font: normal normal normal 12px/12px Montserrat;
+        letter-spacing: 0.1px;
+        color: #F73843;
+        &.desktop-title {
+            font-size: 30px;
+            line-height: 30px;
+            letter-spacing: 0.3px;
+        }
+    }
+    .content {
+        font: normal normal normal 12px/15px Montserrat;
+        letter-spacing: 0.05px;
+        color: #FAFAFA;
+        &.desktop-content {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.14px;
+        }
+    }
+}

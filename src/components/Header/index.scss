@@ -1,0 +1,12 @@
+.header {
+    font: normal normal normal 20px/24px Botrio;
+    letter-spacing: 0px;
+    color: #F73843;
+    opacity: 1;
+    
+    &.desktop-header {
+        font-size: 50px;
+        line-height: 58px;
+        letter-spacing: 0px;
+    }
+}

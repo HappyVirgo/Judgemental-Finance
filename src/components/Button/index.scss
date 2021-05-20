@@ -1,0 +1,14 @@
+.btn {
+    padding: 6px 15px;
+    font: normal normal normal 10px/12px Botrio;
+    letter-spacing: 0px;
+    color: #FAFAFA;
+    opacity: 1;
+    border-radius: 4px;
+    &.desktop-button {
+        padding: 15px 32px;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+}

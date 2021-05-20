@@ -1,0 +1,80 @@
+.introduction {
+    padding: 50px 10px 0px 10px;
+    gap: 28px;
+    &.desktop {
+        padding-top: 216px;
+    }
+    .right-side {
+        margin-top: 23px;
+        .read-more {
+            font: normal normal normal 12px/15px Montserrat;
+            letter-spacing: 0.05px;
+            color: #F73843;
+            opacity: 1;
+            display: flex;
+            width: 80px;
+            border-bottom: 2px solid white;
+            border-radius: 2px;
+        }
+    }
+}
+
+.tokenomics {
+    gap: 25px;
+    padding: 20px;
+    &.tokenomics-desktop {
+        gap: 204px;
+    }
+    .right-side {
+        padding-top: 24px;
+        .judge-header {
+            font: normal normal normal 9px/11px Montserrat;
+            letter-spacing: 0.09px;
+            color: #FAFAFA;
+            border-bottom: 2px solid #FAFAFA;
+            width: 21px;
+            border-radius: 2px;
+            &.judge-header-desktop {
+                font-size: 25px;
+                line-height: 30px;
+                letter-spacing: 0.25px;
+            }
+        }
+        .judge {
+            max-width: 198px;
+            gap: 15px;
+            &.judge-desktop {
+                max-width: 720px;
+                gap: 42px;
+            }
+            .emission-rate {
+                font: normal normal 600 4px/5px Montserrat;
+                letter-spacing: 0.04px;
+                color: #F73843;
+                opacity: 1;
+                &.emission-rate-desktop {
+                    letter-spacing: 0.14px;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+
+.presale {
+    .right-side {
+        .table {
+            min-width: 153px;
+            box-shadow: 0px 3px 6px #F73843BD;
+            border: 1px solid #F73843;
+            border-radius: 6px;
+            opacity: 1;
+        }
+    }
+}
+
+.roadmap {
+    padding-bottom: 50px;
+    gap: 20px;
+}
