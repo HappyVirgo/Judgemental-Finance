@@ -1,0 +1,59 @@
+.headerWrapper {
+    width: 300px;
+    &.desktop {
+        padding-top: 145px;
+        width: unset;
+    }
+}
+
+.judges {
+    gap: 30px;
+    padding-top: 54px;
+    &.desktop {
+        padding-top: 119px;
+    }
+}
+.how-work {
+    width: 300px;
+    &.desktop {
+        padding-top: 284px;
+        width: unset;
+        .description {
+            font: italic normal normal 20px/30px Montserrat;
+        }
+    }
+}
+.how-work-description {
+    width: 300px;
+    padding-bottom: 80px;
+    &.desktop {
+        width: unset;
+        flex-direction: row;
+        gap: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .tag {
+            font: italic normal bold 23px/35px Montserrat;
+        }
+        .first-text {
+            font: normal normal normal 73px/73px Botrio;
+        }
+        .description {
+            font: normal normal normal 23px/35px Montserrat;
+            width: 720px;
+            padding-top: 115px;
+        }
+    }
+    .first-text {
+        font: normal normal normal 20px/20px Botrio;
+        letter-spacing: 0px;
+        color: #F73843;
+        opacity: 1;
+    }
+    .description {
+        padding-top: 25px;
+        font: normal normal medium 8px/14px Montserrat;
+        letter-spacing: 0.08px;
+        color: #FAFAFA;
+    }
+}

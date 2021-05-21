@@ -3,6 +3,12 @@
     letter-spacing: 0px;
     color: #F73843;
     opacity: 1;
+
+    &.bottom-bordered {
+        border-bottom: 3px solid #F73843;
+        color: #F6F6F6;
+        padding: 5.5px;
+    }
     
     &.desktop-header {
         font-size: 50px;
