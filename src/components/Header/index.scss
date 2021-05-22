@@ -4,6 +4,13 @@
     color: #F73843;
     opacity: 1;
 
+    &.sm {
+        font: normal normal normal 20px/23px Botrio;
+        &.desktop-header {
+            font: normal normal normal 40px/55px Botrio;
+        }
+    }
+
     &.bottom-bordered {
         border-bottom: 3px solid #F73843;
         color: #F6F6F6;
@@ -14,5 +21,11 @@
         font-size: 50px;
         line-height: 58px;
         letter-spacing: 0px;
+    }
+    &.marginTop15 {
+        margin-top: 15px;
+        &.desktop {
+            margin-top: 132px;
+        }
     }
 }

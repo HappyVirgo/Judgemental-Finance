@@ -1,0 +1,42 @@
+.card {
+    &.desktop {
+        .tag {
+            font: normal normal normal 15px/19px Montserrat;
+            padding-top: 20px;
+            padding-bottom: 4px;
+        }
+        .amount {
+            padding: 9px;
+            font: normal normal normal 20px/24px Botrio;
+        }
+        .image {
+            width: unset;
+            max-width: 260px;
+            border-radius: 15px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .image {
+        display: flex;
+        width: 58px;
+        border: 1px solid #F7B038;
+        border-radius: 4px;
+        opacity: 1;
+    }
+    .tag {
+        font: normal normal normal 4px/5px Montserrat;
+        letter-spacing: 0px;
+        color: #FAFAFA;
+        opacity: 0.7;
+    }
+    .amount {
+        background: #F7B038 0% 0% no-repeat padding-box;
+        border-radius: 2px;
+        opacity: 1;
+        font: normal normal normal 5px/6px Botrio;
+        letter-spacing: 0px;
+        color: #1C1C20;
+    }
+}

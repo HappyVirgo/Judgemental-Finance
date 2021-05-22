@@ -10,7 +10,7 @@ import RoadmapContent from '../../components/RoadmapContent'
 
 import './index.scss'
 
-import LandingImage from '../../assets/images/landing-image@2x.png'
+import HomeVideo from '../../assets/images/HomePage.mp4'
 import Customer1 from '../../assets/images/customer1.png'
 import Customer1Desktop from '../../assets/images/customer1@desktop.png'
 import Customer2 from '../../assets/images/customer2.png'
@@ -28,7 +28,7 @@ const Home = () => {
     const texts3 = ["Launch of community-voted New World", "Introduction of governance mechanism", " Marketplace expansion to include other NFTs", "Cross-chain capabilities", " In-house tokenization of Judgement NFTs, to increase liquidity and value"]
     return (
         <div>
-            <img src={LandingImage} alt="landing" className="w-full" />
+            <video loop autostart="true" autoPlay src={HomeVideo} type="video/mp4" />
             <div id="introduction" className={`introduction flex flex-wrap ${isMobile&&'items-center'} justify-center ${!isMobile&&'desktop'}`}>
                 <div className="left-side">
                     <Header text="Introduction" isMobile={isMobile} />

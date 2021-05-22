@@ -10,7 +10,7 @@
 }
 
 .tag {
-    font: normal normal normal 10px/13px Montserrat;
+    font: normal normal normal 12px/15px Montserrat;
     letter-spacing: 0px;
     color: #F73843;
     text-transform: uppercase;
@@ -49,7 +49,7 @@
 }
 
 .description {
-    font: normal normal normal 10px/13px Montserrat;
+    font: normal normal normal 12px/15px Montserrat;
     letter-spacing: 0px;
     color: #FAFAFA;
     opacity: 0.7;
@@ -124,6 +124,10 @@
         letter-spacing: 0px;
         color: #FAFAFA;
         margin-top: 2px;
+        &.desktop {
+            padding: 10px;
+            margin-top: 4px;
+        }
     }
     .connect-button {
         background: #F73843 0% 0% no-repeat padding-box;
@@ -135,7 +139,10 @@
         padding: 6px 16px;
         margin-top: 5px;
         &.desktop {
+            margin-bottom: 15px;
+            width: 261px;
             font: normal normal normal 18px/21px Botrio;
+            margin-top: 18px;
         }
     }
     .details-text {
@@ -144,26 +151,31 @@
         color: #FAFAFA;
         opacity: 0.7;
         padding-top: 6px;
+        &.desktop {
+            font: normal normal normal 15px/19px Montserrat;
+        }
     }
     .detail {
         padding-bottom: 16px;
+        &.desktop {
+            .details-tag {
+                font: normal normal normal 13px/15px Montserrat;
+            }
+            .amount {
+                font: normal normal normal 15px/19px Montserrat;
+            }
+        }
         .details-tag {
             font: normal normal normal 8px/10px Montserrat;
             letter-spacing: 0.08px;
             color: #FAFAFA;
             opacity: 0.7;
-            &.desktop {
-                font: normal normal normal 13px/15px Montserrat;
-            }
         }
         .amount {
             font: normal normal normal 9px/12px Montserrat;
             letter-spacing: 0.14px;
             color: #FAFAFA;
             opacity: 1;
-            &.desktop {
-                font: normal normal normal 15px/19px Montserrat;
-            }
         }
     }
     .badge {

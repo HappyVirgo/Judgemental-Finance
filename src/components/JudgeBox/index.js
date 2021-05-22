@@ -14,35 +14,35 @@ const JudgeBox = ({data, idx, isMobile}) => {
                 <span className={`arp ${!isMobile&&'desktop'}`}>{data.curArp}$</span>
             </div>
             <div className={`skating-card flex flex-col items-center ${!isMobile&&'desktop'}`}>
-                <div className="flex usdt-wrapper pt-3">
+                <div className="flex usdt-wrapper" style={{paddingTop:isMobile?'12px':'42px'}}>
                     <span className="white-tag">USDT_JUDGE</span>
                     <div className="flex tvl-wrapper">
                         <span className="white-tag">TVL</span>
                         <span className="tvl">{data.tvl}$</span>
                     </div>
                 </div>
-                <div className="flex gap-6">
-                    <div className={`box stacked-box flex flex-col gap-1 ${!isMobile&&'desktop'}`}>
+                <div className="flex gap-6" style={{paddingTop:!isMobile&&'46px'}}>
+                    <div className={`box stacked-box flex flex-col  ${isMobile?'gap-1':'gap-3'} ${!isMobile&&'desktop'}`}>
                         <span className="title">Staked USD</span>
                         <span className="amount">${data.stacked}</span>
                         <span className={`description ${!isMobile&&'desktop'}`}>({data.stacked} LP Token)</span>
                     </div>
-                    <div className={`box earned-box flex flex-col gap-1 ${!isMobile&&'desktop'}`}>
+                    <div className={`box earned-box flex flex-col ${isMobile?'gap-1':'gap-3'} text-right ${!isMobile&&'desktop'}`}>
                         <span className="title">JUDGE Earned</span>
                         <span className="amount">{data.earned}</span>
                         <span className={`description ${!isMobile&&'desktop'}`}>(${data.earned})</span>
                     </div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col" style={{paddingTop: isMobile?'':'75px'}}>
                     <div className="flex items-center justify-between">
                         <span className={`description ${!isMobile&&'desktop'}`}>wallet:{data.wallet}</span>
                         <span className={`badge ${!isMobile&&'desktop'}`}>max</span>
                     </div>
-                    <input type="text" placeholder="Enter amount" className="amount-input p-1 text-center" />
+                    <input type="text" placeholder="Enter amount" className={`amount-input p-1 text-center ${!isMobile&&'desktop'}`} />
                     <button className={`connect-button pt-1 ${!isMobile&&'desktop'}`}>connect wallet</button>
-                    <span className="details-text pb-3 text-center items-center" onClick={showDetails}>
+                    <span className={`details-text pb-3 text-center items-center ${!isMobile&&'desktop'}`} onClick={showDetails}>
                         Details
-                        <svg className="box__arrow inline ml-2" style={{transform: show&&'rotate(180deg)'}} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="box__arrow inline ml-2" style={{transform: show&&'rotate(180deg)'}} width={isMobile?"16":"20"} height={isMobile?"16":"20"} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5 5L8 10.5L2.5 5" stroke="white" stroke-width="1.5"></path>
                         </svg>
                     </span>
