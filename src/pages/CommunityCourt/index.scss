@@ -1,0 +1,109 @@
+.community-court {
+    &.desktop {
+        .description {
+            font: normal normal normal 20px/24px Montserrat;
+        }
+        .limit-time {
+            font: normal normal normal 50px/61px Montserrat;
+        }
+        .limit-time-tag {
+            font: normal normal normal 15px/19px Montserrat;
+        }
+        .images {
+            gap: 40px;
+        }
+        .badge {
+            font: normal normal normal 28px/33px Botrio;
+        }
+        .paddingTop50 {
+            padding-top: 120px;
+        }
+    }
+    .paddingTop50 {
+        padding-top: 50px;
+    }
+    .description {
+        font: normal normal normal 13px/16px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+    .limit-time {
+        font: normal normal normal 25px/30px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    .limit-time-tag {
+        font: normal normal normal 12px/15px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+    .images {
+        gap: 15px;
+        .avatar-yellow {
+            border: 2px solid #F7B038;
+            border-radius: 999px;
+            opacity: 1;
+        }
+        .avatar-red {
+            border-radius: 999px;
+            border: 2px solid #F73843;
+            opacity: 1;
+        }
+    }
+    
+    .badge {
+        margin-top: 10px;
+        padding: 2px;
+        border-radius: 3px;
+        opacity: 1;
+        font: normal normal normal 11px/12px Botrio;
+        letter-spacing: 0px;
+        color: #1C1C20;
+        &.badge-yellow {
+            background: #F7B038 0% 0% no-repeat padding-box;
+        }
+        &.badge-red {
+            background: #F73843 0% 0% no-repeat padding-box;
+        }
+    }
+    .hero {
+        border: 1px solid #F7B038;
+        border-radius: 4px;
+        font: normal normal normal 10px/12px Botrio;
+        opacity: 1;
+        color: #F7B038;
+        padding: 4px;
+        display: inline-block;
+        &.desktop {
+            transform: rotate(-90deg);
+            border-radius: 12px;
+            padding: 10px;
+            font: normal normal normal 20px/24px Botrio;
+        }
+        &.mobile {
+            transform: rotate(-90deg);
+        }
+    }
+    .villain {
+        border: 1px solid #F73843;
+        border-radius: 4px;
+        font: normal normal normal 10px/12px Botrio;
+        opacity: 1;
+        color: #F73843;
+        padding: 4px;
+        display: inline-block;
+        &.desktop {
+            transform: rotate(-90deg);
+            border-radius: 12px;
+            padding: 10px;
+            font: normal normal normal 20px/24px Botrio;
+        }
+        &.mobile {
+            transform: rotate(-90deg);
+        }
+    }
+}
