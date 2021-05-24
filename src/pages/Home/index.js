@@ -29,7 +29,7 @@ const Home = () => {
     const texts3 = ["Launch of community-voted New World", "Introduction of governance mechanism", " Marketplace expansion to include other NFTs", "Cross-chain capabilities", " In-house tokenization of Judgement NFTs, to increase liquidity and value"]
     return (
         <div>
-            <VideoLooper source={HomeVideo} start={0} end={1.8} width={'100vw'} height={isMobile?'56vw':'calc(100vh - 112px)'} objectFit={'cover'} loopCount={1000} autoplay={true} />
+            <VideoLooper source={HomeVideo} start={0} end={1.8} width={'100%'} height={isMobile?'56vw':'calc(100vh - 112px)'} objectFit={'cover'} loopCount={1000} autoplay={true} />
             <div id="introduction" className={`introduction flex flex-wrap ${isMobile&&'items-center'} justify-center ${!isMobile&&'desktop'}`}>
                 <div className="left-side">
                     <Header text="Introduction" isMobile={isMobile} />
