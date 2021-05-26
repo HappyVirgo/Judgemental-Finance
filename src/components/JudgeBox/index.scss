@@ -25,8 +25,9 @@
     border: 2px solid #F73843;
     opacity: 0.7;
     width: 130px;
+    border-radius: 5px;
     &.desktop {
-        width: 197px;
+        width: 199px;
         .title {
             font: normal normal normal 20px/24px Montserrat;
         }
@@ -52,7 +53,6 @@
     font: normal normal normal 12px/15px Montserrat;
     letter-spacing: 0px;
     color: #FAFAFA;
-    opacity: 0.7;
     &.desktop {
         font: normal normal normal 15px/19px Montserrat;
     }
@@ -61,21 +61,25 @@
 .stacked-box {
     padding: 11px 13px;
     float: left;
+    .amount {
+        padding-top: 10px;
+    }
 }
 
 .earned-box {
     padding: 11px 13px;
     float: right;
+    .amount {
+        padding-top: 10px;
+    }
 }
 
 .skating-card {
     background: #1C1C20 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 35px #000000;
     border: 2px solid #F73843;
-    opacity: 0.7;
     border-radius: 12px;
     width: 284px;
-    gap: 15px;
     &.desktop {
         width: 418px;
         .white-tag {
@@ -83,10 +87,8 @@
             letter-spacing: 0px;
         }
         .usdt-wrapper {
-            gap: 65px;
         }
         .tvl-wrapper {
-            gap: 26px;
             .tvl {
                 font: normal normal normal 25px/30px Montserrat;
                 letter-spacing: 0px;
@@ -98,7 +100,6 @@
         }
     }    
     .usdt-wrapper {
-        gap: 74px;
     }
     .white-tag {
         font: normal normal normal 15px/19px Montserrat;
@@ -108,7 +109,6 @@
     }
     
     .tvl-wrapper {
-        gap: 13px;
         .tvl {
             font: normal normal normal 15px/19px Montserrat;
             letter-spacing: 0px;
@@ -143,6 +143,7 @@
             width: 261px;
             font: normal normal normal 18px/21px Botrio;
             margin-top: 18px;
+            padding: 14px 48px;
         }
     }
     .details-text {

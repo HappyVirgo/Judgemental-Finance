@@ -4,7 +4,7 @@ import './index.scss'
 
 const RoadmapContent = ({texts, isMobile}) => {
     return (
-        <div className={`${!isMobile&&'desktop'} roadmap-texts flex flex-col`}>
+        <div className={`${!isMobile&&'desktop'} roadmap-texts flex flex-col space-y-1`}>
         {texts.map((text, idx) => {
             return (
                 <p className={`${!isMobile&&'desktop'} roadmap-text`} key={idx}>

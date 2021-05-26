@@ -11,13 +11,10 @@ import RoadmapContent from '../../components/RoadmapContent'
 
 import './index.scss'
 
-import HomeVideo from '../../assets/images/HomePage.mp4'
-import Customer1 from '../../assets/images/customer1.png'
-import Customer1Desktop from '../../assets/images/customer1@desktop.png'
-import Customer2 from '../../assets/images/customer2.png'
-import Customer2Desktop from '../../assets/images/customer2@desktop.png'
-import Customer3 from '../../assets/images/customer3.png'
-import Customer3Desktop from '../../assets/images/customer3@desktop.png'
+import HomeVideo from '../../assets/videos/HomePage.mp4'
+import Vitalik from '../../assets/videos/Vitalik.mp4'
+import Satoshi from '../../assets/videos/Satoshi.mp4'
+import PeterSchiff from '../../assets/videos/PeterSchiff.mp4'
 
 const Home = () => {
     const isSMDesktop = useMediaQuery({ query: `(max-width: 1420px)` });
@@ -29,8 +26,8 @@ const Home = () => {
     const texts3 = ["Launch of community-voted New World", "Introduction of governance mechanism", " Marketplace expansion to include other NFTs", "Cross-chain capabilities", " In-house tokenization of Judgement NFTs, to increase liquidity and value"]
     return (
         <div>
-            <VideoLooper source={HomeVideo} start={0} end={1.8} width={'100%'} height={isMobile?'56vw':'calc(100vh - 112px)'} objectFit={'cover'} loopCount={1000} autoplay={true} />
-            <div id="introduction" className={`introduction flex flex-wrap ${isMobile&&'items-center'} justify-center ${!isMobile&&'desktop'}`}>
+            <VideoLooper source={HomeVideo} start={0} end={1.9} width={'100%'} height={isMobile?'56vw':'calc(100vh - 112px)'} objectFit={'cover'} loopCount={1000} autoplay={true} />
+            <div id="introduction" className={`introduction flex flex-wrap ${isMobile?'items-center':'desktop'} justify-center ${isMobile?!isXSMobile&&'space-x-8':!isSMDesktop&&'space-x-40'}`}>
                 <div className="left-side">
                     <Header text="Introduction" isMobile={isMobile} />
                     <Description className="mt-2-c" maxWidth={`${isMobile?'200px':'554px'}`} isMobile={isMobile} text="Judgement Finance is an interactive, next-generation NFT, staking, and marketplace platform that allows users to decide who will become a Hero and who will become a Villain!" />
@@ -53,16 +50,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div id="how-it-works" className="how-it-works flex flex-wrap items-center justify-center" style={{gap: !isMobile&&'158px', paddingTop: !isMobile&&'150px'}}>
-                {isMobile?<img src={Customer1} alt="customer" style={{marginLeft: '-70px'}} />:<img src={Customer1Desktop} width="440px" alt="customer" />}
-                <div className={`flex flex-col gap-2-c right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'-50px'}`, marginBottom: '20px'}}>
+            <div id="how-it-works" className={`how-it-works flex flex-wrap items-center justify-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: !isMobile?'150px':'50px'}}>
+                <VideoLooper source={Vitalik} start={0} end={3.8} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} objectFit={'cover'} loopCount={1000} autoplay={true} />
+                <div className={`flex flex-col space-y-3 right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'-50px'}`, marginBottom: '20px'}}>
                     <Header text="How it works" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'320px':'895px'}`}}>The Judgement platform is where you go to stake our native&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$JUDGE</span>&nbsp;token in order to earn&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$REDEEM</span>&nbsp;tokens that can be swapped for our NFTs. Our platform also supports liquidity-token staking, where you can earn both $JUDGE and $REDEEM, where you’ll find our Community Court as well as our NFT Redemption page and NFT Marketplace. To know about how our platform works you can read through below article.</span>
                     <Button text="Medium Article" isMobile={isMobile} />
                 </div>
             </div>
-            <div id="tokenomics" className={`${!isMobile&&'tokenomics-desktop'} tokenomics flex flex-wrap items-center justify-center`} style={{paddingTop: !isMobile&&'200px'}}>
-                <div className="left-side flex flex-col gap-2-c">
+            <div id="tokenomics" className={`${!isMobile&&'tokenomics-desktop'} tokenomics flex flex-wrap items-center justify-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: !isMobile&&'200px'}}>
+                <div className="left-side flex flex-col space-y-3">
                     <Header text="Tokenomics" isMobile={isMobile} />
                     <Description isMobile={isMobile} text="There are two tokens within our ecosystem." />
                     <span style={{maxWidth: `${isMobile?'202px':'564px'}`}} className={`${!isMobile&&'desktop-description'} normal`}>Our main token is&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$JUDGE</span>, which is our tradable token and what you can buy and sell on Uniswap (other exchanges will follow)</span>
@@ -70,9 +67,9 @@ const Home = () => {
                     <Description isMobile={isMobile} maxWidth={`${isMobile?'202px':'564px'}`} text="The sole utility of the $REDEEM token is to swap for Judgement NFTs. It is not transferable outside of our platform." />
                     <hr style={{width: '66px', border:'1px solid #FAFAFA', borderRadius:"2px"}} />
                 </div>
-                <div className="right-side flex flex-col gap-4">
+                <div className={`right-side flex flex-col space-y-4 ${!isMobile&&'mt-20'}`}>
                     <p className={`${!isMobile&&'judge-header-desktop'} judge-header uppercase`}>$Judge</p>
-                    <div className={`${!isMobile&&'judge-desktop'} judge flex flex-wrap`}>
+                    <div className={`${!isMobile&&'judge-desktop'} grid judge gap-10 ${isMobile?'grid-cols-5':'grid-cols-8'}`}>
                         <Item title="100K" content="Initial Supply" isMobile={isMobile} />
                         <Item title="124K" content="Maximum Supply" isMobile={isMobile} />
                         <Item title="3.3K" content="Private Sale" isMobile={isMobile} />
@@ -83,7 +80,7 @@ const Home = () => {
                         <Item title="24K" content="Staking Rewards" isMobile={isMobile} />
                     </div>
                     <p className={`${!isMobile&&'judge-header-desktop'} judge-header uppercase`} style={{paddingTop: !isMobile&&'42px'}}>$Redeem</p>
-                    <div className={`${!isMobile&&'judge-desktop'} judge flex flex-wrap items-end`}>
+                    <div className={`${!isMobile&&'judge-desktop'} judge grid gap-10 items-end ${isMobile?'grid-cols-5':'grid-cols-8'}`}>
                         <Item title="180K" content="First Two Months" isMobile={isMobile} />
                         <Item title="90K" content="Month Thereafter" isMobile={isMobile} />
                         <Item title="1800K" content="Maximum Supply" isMobile={isMobile} />
@@ -91,33 +88,33 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div id="presale" className="presale flex flex-wrap items-center justify-center" style={{gap:`${isMobile?'unset':'158px'}`, paddingTop: !isMobile&&'200px'}}>
-                {isMobile?<img src={Customer2} alt="Customer" style={{marginLeft: '-70px'}} />:<img src={Customer2Desktop} width="440px" alt="customer" />}
-                <div className="right-side flex flex-col gap-2-c px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'-50px'}`, marginBottom: '20px'}}>
+            <div id="presale" className={`presale flex flex-wrap items-center justify-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: isMobile?'50px':'200px'}}>
+                <VideoLooper source={Satoshi} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} start={0} end={7.5} objectFit={'cover'} loopCount={1000} autoplay={true} />
+                <div className="right-side flex flex-col space-y-3 px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'-50px'}`, marginBottom: '20px'}}>
                     <Header text="Presale" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>Our presale will be held on&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>Unicrypt.network</span>&nbsp;to ensure that liquidity will be locked</span>
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>We will be looking over&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$1M USD</span>&nbsp;in liquidity for the first year.</span>
-                    <div className="table flex px-3 py-2 gap-1">
-                        <div className="flex justify-between w-full">
+                    <div className="table flex px-3 py-2 space-x-1">
+                        <div className="flex justify-between w-full space-x-2">
                             <span className={`${!isMobile&&'desktop-description'} highlight uppercase`}>Presalre Rate</span>
                             <span className={`${!isMobile&&'desktop-description'} normal uppercase`}>54K $Judge</span>
                         </div>
-                        <div className="flex justify-between w-full">
+                        <div className="flex justify-between w-full space-x-2">
                             <span className={`${!isMobile&&'desktop-description'} highlight uppercase`}>At a price of</span>
                             <span className={`${!isMobile&&'desktop-description'} normal uppercase`}>90 $Judge per ETH</span>
                         </div>
-                        <div className="flex justify-between w-full">
+                        <div className="flex justify-between w-full space-x-2">
                             <span className={`${!isMobile&&'desktop-description'} highlight uppercase`}>Uniswap listing rate</span>
                             <span className={`${!isMobile&&'desktop-description'} normal uppercase`}>80 $Judge per ETH</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="roadmap" className="roadmap flex flex-wrap justify-center items-center" style={{paddingTop: !isMobile&&'200px', gap: !isMobile&&'270px'}}>
-                <img src={isMobile?Customer3:Customer3Desktop} alt="customer" width={`${!isMobile?'400px':'unset'}`} />
+            <div id="roadmap" className={`roadmap flex flex-wrap justify-center items-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: isMobile?'50px':'200px'}}>
+                <VideoLooper source={PeterSchiff} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} start={0} end={3.8} objectFit={'cover'} loopCount={1000} autoplay={true} />
                 <div className="flex flex-col">
                     <Header text="Roadmap" isMobile={isMobile} />
-                    <div className="roadmap-content" style={{paddingTop: '15px'}}>
+                    <div className="roadmap-content right-side" style={{paddingTop: '15px'}}>
                         <RoadmapTitle titleTag="Q1" titleYear="2021" isMobile={isMobile} />
                         <RoadmapContent texts={texts1} isMobile={isMobile} />
                         <RoadmapTitle titleTag="Q2" titleYear="2021" isMobile={isMobile} />

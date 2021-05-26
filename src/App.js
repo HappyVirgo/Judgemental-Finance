@@ -14,7 +14,7 @@ import './assets/css/tailwind.css';
 import './assets/scss/app.scss';
 
 function App() {
-  const isSMDesktop = useMediaQuery({ query: `(max-width: 1420px)` });
+  const isSMDesktop = useMediaQuery({ query: `(max-width: 1680px)` });
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
   const isXSMobile = useMediaQuery({ query: `(max-width: 390px)` });
 
