@@ -1,6 +1,8 @@
+.right-side {
+    max-width: 720px;
+}
 .introduction {
     padding: 50px 10px 0px 10px;
-    gap: 28px;
     &.desktop {
         padding-top: 216px;
     }
@@ -20,13 +22,12 @@
 }
 
 .tokenomics {
-    gap: 25px;
     padding: 20px;
     &.tokenomics-desktop {
-        gap: 204px;
     }
     .right-side {
         padding-top: 24px;
+        max-width: 900px;
         .judge-header {
             font: normal normal normal 9px/11px Montserrat;
             letter-spacing: 0.09px;
@@ -41,11 +42,9 @@
             }
         }
         .judge {
-            max-width: 198px;
-            gap: 15px;
+            max-width: 320px;
             &.judge-desktop {
-                max-width: 720px;
-                gap: 42px;
+                max-width: 900px;
             }
             .emission-rate {
                 font: normal normal 600 4px/5px Montserrat;
@@ -76,5 +75,4 @@
 
 .roadmap {
     padding-bottom: 50px;
-    gap: 20px;
 }

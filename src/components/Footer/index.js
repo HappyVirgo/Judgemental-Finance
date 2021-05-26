@@ -14,7 +14,7 @@ const Footer = ({isMobile}) => {
                 <p className={`header font-bold`}>judgement finance</p>
                 <p className="copyright">Copyright © 2021 Judgement. All Rights Reserved.</p>
             </div>
-            <div className="social-links flex gap-3">
+            <div className={`social-links flex ${isMobile?'space-x-4':'space-x-12'}`}>
                 <a href="/"><img src={isMobile?Telegram:TelegramDesktop} alt="telegram" /></a>   
                 <a href="/"><img src={isMobile?Twitter:TwitterDesktop} alt="twitter" /></a>
                 <a href="/"><img src={isMobile?Telegram:TelegramDesktop} alt="telegram" /></a>

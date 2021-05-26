@@ -25,12 +25,13 @@ const judges = [
 
 const StakingPool = () => {
     const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+    const isXSMobile = useMediaQuery({ query: `(max-width: 390px)` });
     return (
         <div className="flex flex-col items-center justify-center">
             <div className={`flex items-center justify-center headerWrapper ${!isMobile&&'desktop'}`}>
                 <Header text="Staking Pool" className="bottom-bordered mt-3" color="#FAFAFA" isMobile={isMobile} />
             </div>
-            <div className={`judges flex flex-wrap justify-center align-items-center ${!isMobile&&'desktop'}`}>
+            <div className={`judges flex flex-wrap justify-center align-items-center ${!isMobile?'desktop space-x-20':(isXSMobile?'space-y-8':'space-x-8')}`}>
                 {judges.map((judge, idx) => {
                     return (
                         <JudgeBox key={idx} idx={idx} data={judge} isMobile={isMobile} />

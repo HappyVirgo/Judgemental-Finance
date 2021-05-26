@@ -7,11 +7,9 @@
 }
 
 .judges {
-    gap: 30px;
     padding-top: 54px;
     &.desktop {
         padding-top: 119px;
-        gap: 80px;
     }
 }
 .how-work {
@@ -30,7 +28,6 @@
     &.desktop {
         width: unset;
         flex-direction: row;
-        gap: 100px;
         flex-wrap: wrap;
         justify-content: center;
         padding-top: 115px;

@@ -2,7 +2,6 @@
     background-color: #1F1E23;
     &.desktop {
         padding: 16px;
-        gap: 16px;
     }
     .btn-launch {
         border-radius: 3px;
@@ -21,10 +20,8 @@
     }
     .links {
         &.desktop {
-            gap: 50px;
         }
         .nav-links {
-            gap: 20px;
             color: #FAFAFA;
             font: normal normal normal 20px/24px Botrio;
             letter-spacing: 0px;
