@@ -55,7 +55,7 @@ const Home = () => {
                 <video autoPlay loop muted width={`${isMobile?'121px':'400px'}`}>
                     <source src={Vitalik} type='video/mp4' />
                 </video>
-                <div className={`flex flex-col space-y-3 right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'-50px'}`, marginBottom: '20px'}}>
+                <div className={`flex flex-col space-y-3 right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'0px'}`, marginBottom: '20px'}}>
                     <Header text="How it works" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'320px':'895px'}`}}>The Judgement platform is where you go to stake our native&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$JUDGE</span>&nbsp;token in order to earn&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$REDEEM</span>&nbsp;tokens that can be swapped for our NFTs. Our platform also supports liquidity-token staking, where you can earn both $JUDGE and $REDEEM, where you’ll find our Community Court as well as our NFT Redemption page and NFT Marketplace. To know about how our platform works you can read through below article.</span>
                     <Button text="Medium Article" isMobile={isMobile} />
@@ -95,7 +95,7 @@ const Home = () => {
                 <video className='' autoPlay loop muted width={`${isMobile?'121px':'400px'}`}>
                     <source src={Satoshi} type='video/mp4' />
                 </video>
-                <div className="right-side flex flex-col space-y-3 px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'-50px'}`, marginBottom: '20px'}}>
+                <div className="right-side flex flex-col space-y-3 px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'0px'}`, marginBottom: '20px'}}>
                     <Header text="Presale" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>Our presale will be held on&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>Unicrypt.network</span>&nbsp;to ensure that liquidity will be locked</span>
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>We will be looking over&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$1M USD</span>&nbsp;in liquidity for the first year.</span>
