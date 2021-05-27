@@ -1,6 +1,14 @@
 .right-side {
     max-width: 720px;
 }
+.videoTag {
+    width: 100%;
+    height: 56vw;
+    &.desktop {
+        height: calc(100vh - 112px);
+        object-fit: cover;
+    }
+}
 .introduction {
     padding: 50px 10px 0px 10px;
     &.desktop {

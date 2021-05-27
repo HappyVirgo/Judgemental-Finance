@@ -1,6 +1,5 @@
 import React from 'react'
 import {useMediaQuery} from 'react-responsive'
-import VideoLooper from 'react-video-looper'
 
 import Header from '../../components/Header'
 import Description from '../../components/Description'
@@ -26,7 +25,9 @@ const Home = () => {
     const texts3 = ["Launch of community-voted New World", "Introduction of governance mechanism", " Marketplace expansion to include other NFTs", "Cross-chain capabilities", " In-house tokenization of Judgement NFTs, to increase liquidity and value"]
     return (
         <div>
-            <VideoLooper source={HomeVideo} start={0} end={1.9} width={'100%'} height={isMobile?'56vw':'calc(100vh - 112px)'} objectFit={'cover'} loopCount={1000} autoplay={true} />
+            <video className={`videoTag ${!isMobile&&'desktop'}`} autoPlay loop muted>
+                <source src={HomeVideo} type='video/mp4' />
+            </video>
             <div id="introduction" className={`introduction flex flex-wrap ${isMobile?'items-center':'desktop'} justify-center ${isMobile?!isXSMobile&&'space-x-8':!isSMDesktop&&'space-x-40'}`}>
                 <div className="left-side">
                     <Header text="Introduction" isMobile={isMobile} />
@@ -51,8 +52,10 @@ const Home = () => {
                 </div>
             </div>
             <div id="how-it-works" className={`how-it-works flex flex-wrap items-center justify-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: !isMobile?'150px':'50px'}}>
-                <VideoLooper source={Vitalik} start={0} end={3.8} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} objectFit={'cover'} loopCount={1000} autoplay={true} />
-                <div className={`flex flex-col space-y-3 right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'-50px'}`, marginBottom: '20px'}}>
+                <video autoPlay loop muted width={`${isMobile?'121px':'400px'}`}>
+                    <source src={Vitalik} type='video/mp4' />
+                </video>
+                <div className={`flex flex-col space-y-3 right-side px-4 ${!isMobile&&'items-start'}`} style={{marginLeft: `${isMobile&&!isXSMobile&&!isSMDesktop&&'0px'}`, marginBottom: '20px'}}>
                     <Header text="How it works" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'320px':'895px'}`}}>The Judgement platform is where you go to stake our native&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$JUDGE</span>&nbsp;token in order to earn&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$REDEEM</span>&nbsp;tokens that can be swapped for our NFTs. Our platform also supports liquidity-token staking, where you can earn both $JUDGE and $REDEEM, where you’ll find our Community Court as well as our NFT Redemption page and NFT Marketplace. To know about how our platform works you can read through below article.</span>
                     <Button text="Medium Article" isMobile={isMobile} />
@@ -89,8 +92,10 @@ const Home = () => {
                 </div>
             </div>
             <div id="presale" className={`presale flex flex-wrap items-center justify-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: isMobile?'50px':'200px'}}>
-                <VideoLooper source={Satoshi} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} start={0} end={7.5} objectFit={'cover'} loopCount={1000} autoplay={true} />
-                <div className="right-side flex flex-col space-y-3 px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'-50px'}`, marginBottom: '20px'}}>
+                <video className='' autoPlay loop muted width={`${isMobile?'121px':'400px'}`}>
+                    <source src={Satoshi} type='video/mp4' />
+                </video>
+                <div className="right-side flex flex-col space-y-3 px-4" style={{marginLeft: `${(isMobile&&!isXSMobile&&!isSMDesktop)&&'0px'}`, marginBottom: '20px'}}>
                     <Header text="Presale" isMobile={isMobile} />
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>Our presale will be held on&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>Unicrypt.network</span>&nbsp;to ensure that liquidity will be locked</span>
                     <span className={`${!isMobile&&'desktop-description'} normal`} style={{maxWidth: `${isMobile?'250px':'820px'}`}}>We will be looking over&nbsp;<span className={`${!isMobile&&'desktop-description'} highlight`}>$1M USD</span>&nbsp;in liquidity for the first year.</span>
@@ -111,7 +116,9 @@ const Home = () => {
                 </div>
             </div>
             <div id="roadmap" className={`roadmap flex flex-wrap justify-center items-center ${isMobile?!isXSMobile&&'space-x-12':!isSMDesktop&&'space-x-40'}`} style={{paddingTop: isMobile?'50px':'200px'}}>
-                <VideoLooper source={PeterSchiff} width={`${isMobile?'121px':'400px'}`} height={`${isMobile?'128px':'533px'}`} style={{flexShrink: '0'}} start={0} end={3.8} objectFit={'cover'} loopCount={1000} autoplay={true} />
+                <video className='' autoPlay loop muted width={`${isMobile?'121px':'400px'}`}>
+                    <source src={PeterSchiff} type='video/mp4' />
+                </video>
                 <div className="flex flex-col">
                     <Header text="Roadmap" isMobile={isMobile} />
                     <div className="roadmap-content right-side" style={{paddingTop: '15px'}}>
