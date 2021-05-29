@@ -13,10 +13,10 @@ const JudgeBox = ({data, idx, isMobile}) => {
                 <span className={`tag uppercase ${!isMobile&&'desktop'}`}>Current ARP</span>
                 <span className={`arp ${!isMobile&&'desktop'}`}>{data.curArp}$</span>
             </div>
-            <div className={`skating-card flex flex-col items-center ${!isMobile&&'desktop'}`}>
-                <div className="flex usdt-wrapper" style={{paddingTop:isMobile?'12px':'42px'}}>
+            <div className={`skating-card flex flex-col items-center ${!isMobile&&'desktop mt-3'}`}>
+                <div className={`flex usdt-wrapper justify-between w-full p-4`} style={{paddingTop:isMobile?'12px':'42px'}}>
                     <span className="white-tag">USDT_JUDGE</span>
-                    <div className="flex tvl-wrapper">
+                    <div className={`flex tvl-wrapper ${isMobile?'space-x-3':'space-x-6'}`}>
                         <span className="white-tag">TVL</span>
                         <span className="tvl">{data.tvl}$</span>
                     </div>
@@ -33,7 +33,7 @@ const JudgeBox = ({data, idx, isMobile}) => {
                         <span className={`description ${!isMobile&&'desktop'}`}>(${data.earned})</span>
                     </div>
                 </div>
-                <div className="flex flex-col" style={{paddingTop: isMobile?'':'75px'}}>
+                <div className="flex flex-col" style={{paddingTop: isMobile?'13px':'75px'}}>
                     <div className="flex items-center justify-between">
                         <span className={`description ${!isMobile&&'desktop'}`}>wallet : {data.wallet}$</span>
                         <span className={`badge ${!isMobile&&'desktop'}`}>max</span>
